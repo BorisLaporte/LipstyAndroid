@@ -16,7 +16,7 @@ public class ThePunchlines {
         this.punchlines[4] = new Punchline("blue", "I turned as blue as this drink when I met you.");
         this.punchlines[5] = new Punchline("green", "I've always thought aliens where green and then I met you.\n(looks confused)\nWell you seem too beautiful to be human so you must be an alien right ? Do you want a green cocktail ?");
         this.punchlines[6] = new Punchline("clear", "I've made you a cocktail as clear as you shrine before me");
-        this.punchlines[7] = new Punchline("null", "Please accept this gift, I've made it juste for you.");
+        this.punchlines[7] = new Punchline("null", "Please accept this gift, I've made it just for you.");
     }
 
     public String getByColor(String color){
