@@ -25,6 +25,6 @@ public class ThePunchlines {
                 return punchline.getText();
             }
         }
-        return "";
+        return this.punchlines[7].getText();
     }
 }
