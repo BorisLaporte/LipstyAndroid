@@ -24,6 +24,7 @@ import borislaporte.lipstyapp.model.Cocktail;
 import borislaporte.lipstyapp.model.Ingredients;
 import borislaporte.lipstyapp.model.Skill;
 import borislaporte.lipstyapp.model.ThePunchlines;
+import borislaporte.lipstyapp.model.Videos;
 
 public class DetailCocktailActivity extends ToolbarStarterActivity implements DetailsStoryFragment.OnTapStory{
 
@@ -103,14 +104,21 @@ public class DetailCocktailActivity extends ToolbarStarterActivity implements De
                 }
             });
         }
-        video.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), VideoActivity.class );
-                intent.putExtra(EXTRA_URI, cocktail.getVideos()[0].getVideoPath());
-                startActivity(intent);
-            }
-        });
+
+        final String youtubeArg = getUrlYoutube(cocktail.getVideos());
+        if ( youtubeArg != null ){
+            video.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getBaseContext(), VideoActivity.class );
+                    intent.putExtra(EXTRA_URI, youtubeArg);
+                    startActivity(intent);
+                }
+            });
+        } else {
+            video.setVisibility(View.GONE);
+        }
+
 
         super.StartToolBar(toolbar_back);
     }
@@ -143,6 +151,15 @@ public class DetailCocktailActivity extends ToolbarStarterActivity implements De
     private String punchlineGenerator(String color){
         ThePunchlines thePunchlines = new ThePunchlines();
         return thePunchlines.getByColor(color);
+    }
+
+    private String getUrlYoutube(Videos[] videos){
+        for ( Videos video : videos ){
+            if ( video.getType().equalsIgnoreCase("youtube") ){
+                return video.getVideoPath();
+            }
+        }
+        return null;
     }
 
     @Override

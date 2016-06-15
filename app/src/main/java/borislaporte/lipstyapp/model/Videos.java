@@ -15,6 +15,8 @@ public class Videos implements Parcelable {
     @JsonProperty(value="video")
     private String videoPath;
 
+    private String type;
+
     public Videos() {
     }
 
@@ -26,8 +28,17 @@ public class Videos implements Parcelable {
         this.videoPath = videoPath;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public Videos(Parcel in){
         this.videoPath = in.readString();
+        this.type = in.readString();
     }
 
     @Override
@@ -38,6 +49,7 @@ public class Videos implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.videoPath);
+        dest.writeString(this.type);
     }
 
     public static final Creator<Videos> CREATOR = new Creator<Videos>() {
