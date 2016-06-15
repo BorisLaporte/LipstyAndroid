@@ -1,0 +1,30 @@
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sub_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="borislaporte.lipstyapp.Fragment.LetsFlirtSubFragment.LetsFlirtSubFragment">
+
+    <ImageView
+        android:id="@+id/image"
+        app:layout_heightPercent="60%"
+        app:layout_aspectRatio="100%"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/key"
+        android:layout_below="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorFontReg"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"/>
+
+</android.support.percent.PercentRelativeLayout>

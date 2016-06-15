@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e61c55</color>
+    <color name="colorPrimaryDark">#e61c55</color>
+    <color name="colorPrimaryDarker">#c31247</color>
+    <color name="colorPrimaryLighter">#f28aaa</color>
+    <color name="backgroundPirmaryTransparancy">#e6e61c55</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorFontReg">#14162d</color>
+    <color name="colorFontTitle">#FFFFFF</color>
+    <color name="colorFontLight">#EEEEEE</color>
+    <color name="colorCocktailName">#14162d</color>
+</resources>

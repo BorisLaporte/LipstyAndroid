@@ -1,0 +1,38 @@
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    tools:context="borislaporte.lipstyapp.Fragment.LoadingResultFragment">
+
+    <ImageView
+        android:id="@+id/image_wait_answers"
+        app:layout_widthPercent="70%"
+        app:layout_aspectRatio="100%"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_marginTopPercent="17%"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/illu_want_answers" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/image_wait_answers">
+
+
+        <TextView
+            android:id="@+id/textWeapon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorFontLight"
+            android:text="Your best weapon is coming..."
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+
+</android.support.percent.PercentRelativeLayout>

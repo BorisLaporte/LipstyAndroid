@@ -1,0 +1,23 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="borislaporte.lipstyapp.Fragment.LetsFlirtGridFormFragment">
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="5sp"
+        android:textFilterEnabled="false"
+        android:choiceMode="singleChoice"
+        android:layout_margin="20dp">
+
+    </GridView>
+
+
+
+</FrameLayout>
+

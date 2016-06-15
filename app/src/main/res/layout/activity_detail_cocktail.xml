@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context="borislaporte.lipstyapp.DetailCocktailActivity">
+
+
+    <include
+        layout="@layout/tool_bar"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@+id/my_toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/cocktail_name"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/cocktail_name"
+                android:text="Mojito"/>
+
+            <RelativeLayout
+                android:id="@+id/skill_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/cocktail_name">
+
+                <ImageView
+                    android:id="@+id/skill_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"/>
+
+                <ImageView
+                    android:id="@+id/skill_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_toEndOf="@+id/skill_1" />
+
+                <ImageView
+                    android:id="@+id/skill_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_toEndOf="@+id/skill_2"/>
+            </RelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/skill_container"
+                android:layout_marginTop="8dp"
+                android:id="@+id/image_container">
+
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/cocktail_result_imageview"
+                    app:layout_widthPercent="55%"
+                    app:layout_aspectRatio="100%"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_centerVertical="true"/>
+
+
+                <TextView
+                    android:id="@+id/cocktail_ingredients"
+                    android:layout_toEndOf="@+id/cocktail_result_imageview"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorFontReg"
+                    android:textSize="15sp" />
+
+
+            </android.support.percent.PercentRelativeLayout>
+
+
+            <TextView
+                android:id="@+id/cocktail_desc"
+                android:layout_below="@+id/image_container"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorFontReg"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/btn_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cocktail_desc"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true">
+
+                <Button
+                    android:id="@+id/btn_story_cocktail"
+                    style="@style/littleBtnStroke"
+                    android:text="Flirt fact"
+                    />
+
+                <Button
+                    android:id="@+id/btn_cocktail_video"
+                    style="@style/littleBtnStroke"
+                    android:layout_toEndOf="@id/btn_story_cocktail"
+                    android:text="Video Recipe"/>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/punchline"
+                android:layout_below="@+id/btn_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/colorPrimary"
+                android:lineSpacingExtra="4sp"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:id="@+id/container"
+        android:layout_below="@+id/my_toolbar">
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="borislaporte.lipstyapp.Fragment.LoadingCheckAllFragment">
+
+
+    <TextView
+        android:id="@+id/textLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/colorFontLight"
+        android:text="Loading..."
+        android:layout_centerHorizontal="true"/>
+
+</android.support.percent.PercentRelativeLayout>

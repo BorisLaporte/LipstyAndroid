@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    tools:context="borislaporte.lipstyapp.MainActivity">
+
+    <include
+        layout="@layout/tool_bar"
+        />
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/my_toolbar"
+            android:id="@+id/image_container">
+
+            <ImageView
+                android:id="@+id/illu_home"
+                app:layout_widthPercent="70%"
+                app:layout_aspectRatio="100%"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:src="@drawable/illu_home"/>
+
+
+            <TextView
+                android:id="@+id/absolut_flirty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:text="absolutely flirty"
+                android:textColor="@color/colorPrimaryDarker"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="40dp"
+                android:layout_centerVertical="true"/>
+
+        </android.support.percent.PercentRelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/image_container">
+
+        <TextView
+            android:id="@+id/text_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorPrimary"
+            android:text="The perfect cocktail for the best target!"
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@+id/btn_lets_flirt"
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_lets_flirt"
+            android:layout_below="@id/text_intro"
+            android:textColor="@color/colorFontLight"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:text="     Let's flirt" />
+
+        <Button
+            android:id="@+id/btn_check_all"
+            style="@style/bigBtnStroke"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:layout_below="@id/btn_lets_flirt"
+            android:text="Check all the cocktails"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

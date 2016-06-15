@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    tools:context="borislaporte.lipstyapp.Fragment.LetsFlirtResultFragment">
+
+    <TextView
+        android:id="@+id/cocktail_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorFontReg"
+        android:text="For the best flirt"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/cocktail_name"
+        android:layout_below="@+id/cocktail_label"
+        android:layout_marginTop="-5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/cocktail_name"
+        android:text="Mojito"/>
+
+    <RelativeLayout
+        android:id="@+id/skill_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/cocktail_name">
+
+        <ImageView
+            android:id="@+id/skill_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"/>
+
+        <ImageView
+            android:id="@+id/skill_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toEndOf="@+id/skill_1" />
+
+        <ImageView
+            android:id="@+id/skill_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toEndOf="@+id/skill_2"/>
+    </RelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/skill_container"
+        android:id="@+id/image_container">
+
+        <!--<ImageView-->
+            <!--app:layout_widthPercent="80%"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="10dp"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--app:layout_marginTopPercent="35%"-->
+            <!--android:src="@drawable/stroke_background"/>-->
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/cocktail_result_imageview"
+            app:layout_widthPercent="55%"
+            app:layout_aspectRatio="100%"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-10dp"/>
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/cocktail_ingredients"
+        android:layout_below="@id/image_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorFontReg"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"/>
+
+
+    <Button
+        style="@style/bigBtnStroke"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:text="Let's go!"
+        android:id="@+id/detail_button"/>
+
+
+</RelativeLayout>

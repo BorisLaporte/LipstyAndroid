@@ -1,0 +1,27 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.LetsFlirtPagerFormFragment">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/lets_flirt_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/dot"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:radius="5dp"
+        app:fillColor="@color/colorPrimaryDarker"
+        app:pageColor="@color/colorPrimaryLighter"
+        app:strokeWidth="0dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="45dp"
+        />
+
+
+
+</FrameLayout>
